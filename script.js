@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas"),
 context = canvas.getContext("2d");
-var xtext = 29;
+var xtext = 23;
 var x = 20;
 var y = 20;
 var onX = 20;
@@ -14,8 +14,6 @@ btn.addEventListener("click", function(){
     unsortedArray = unsorted.split(',').map(function(item) {
         return parseInt(item, 10);
     }); 
-    context.font = "32px Verdana";
-
    var maxNum = Math.max.apply(null, unsortedArray);
     debugger;
     context.canvas.width = unsortedArray.length*20+40+unsortedArray.length*3;
@@ -37,8 +35,11 @@ function drawSortedArray(arr){
     var xtext1 = xtext; 
     var x1 = x; 
     for(var i=0; i<arr.length; i++){ 
-        context.clearRect(x1,y,onX, context.canvas.height )
-        context.fillText(arr[i], xtext1, context.canvas.height-20);     
+        context.clearRect(x1,y,onX, context.canvas.height );
+        context.fillStyle = 'Yellow';
+        //context.font = "10px Verdana";
+        context.fillText(arr[i], xtext1, context.canvas.height-20); 
+        context.fillStyle = 'Black';
         context.fillRect(x1,y,onX, onY*arr[i] ); 
         xtext1=xtext1+23; 
         x1=x1+onX+3; 
