@@ -12,7 +12,7 @@ canvas{
     background-color:dodgerblue;
 }
 .button{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none  ;
     color: white;
     padding: 15px 32px;
@@ -33,5 +33,6 @@ h3{
     margin-left: 5px;
 }
 .input1{
+    width: 333px;
      margin: 5px;
 }
